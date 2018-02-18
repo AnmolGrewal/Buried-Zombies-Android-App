@@ -18,7 +18,15 @@ android {
         }
     }
 }
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
 
+dependencies {
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.10'
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
