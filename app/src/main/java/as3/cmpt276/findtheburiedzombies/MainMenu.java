@@ -49,7 +49,7 @@ public class MainMenu extends AppCompatActivity {
         });
     }
 
-    //Makes it if you press back button on activity screen it exits app
+    //Back Button to Exit Application
     @Override
     public void onBackPressed() {
         //super.onBackPressed();
