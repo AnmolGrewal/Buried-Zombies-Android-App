@@ -31,18 +31,18 @@ public class welcomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
 
-        //Animation lasts about 3seconds so 4seconds after
+        //Animation lasts about 2seconds so 4seconds after
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                // Do something after 7s = 7000ms
+                // Do something after 6s = 6000ms
                 //Which is launch the Main Menu Activity
                 if(counter == 0) {
                     mainMenu();
                 }
             }
-        }, 7000);
+        }, 6000);
 
         ImageButton skip = findViewById(R.id.imageButton);
         skip.setOnClickListener(new View.OnClickListener() {
