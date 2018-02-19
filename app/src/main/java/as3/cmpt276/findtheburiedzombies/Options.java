@@ -12,7 +12,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import as3.cmpt276.findtheburiedzombies.model.GameState;
-//DONE
+//DONE ASSIGNMENT
 public class Options extends AppCompatActivity {
 
     private static final String PREF_NAME = "AppPrefs";
