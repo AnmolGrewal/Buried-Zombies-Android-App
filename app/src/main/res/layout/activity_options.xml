@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:screenOrientation="landscape"
     tools:context="as3.cmpt276.findtheburiedzombies.Options">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -36,6 +36,26 @@
             android:layout_marginStart="11dp"
             android:layout_marginTop="12dp"
             android:layout_toEndOf="@+id/helpText" />
+
+        <RadioGroup
+            android:id="@+id/boardSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/numMines"
+            android:layout_marginStart="183dp"
+            android:layout_toEndOf="@+id/numMines" />
+
+        <Button
+            android:id="@+id/eraseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/helpText"
+            android:layout_marginBottom="31dp"
+            android:layout_marginStart="13dp"
+            android:background="@android:color/black"
+            android:text="@string/eraseTimes"
+            android:textColor="@android:color/white" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

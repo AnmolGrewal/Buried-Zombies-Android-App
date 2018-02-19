@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:screenOrientation="landscape"
     tools:context="as3.cmpt276.findtheburiedzombies.Help">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -38,7 +39,7 @@
             android:layout_alignStart="@+id/textView5"
             android:layout_below="@+id/textView5"
             android:layout_marginTop="7dp"
-            android:text="@string/help"
+            android:text="@string/helpParagraph"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
             android:textColor="@android:color/white"
             tools:layout_editor_absoluteX="16dp"

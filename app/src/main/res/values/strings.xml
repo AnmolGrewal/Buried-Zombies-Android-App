@@ -8,4 +8,18 @@
     <string name="options">Options</string>
     <string name="play_game">Play Game</string>
     <string name="help1">Help</string>
+    <string name="minesOption">%1$d mines</string>
+    <string name="boardOption">%1$d rows by %2$d columns</string>
+    <string name="eraseTimes">Erase Times Played And All High Scores</string>
+    <string name="google_stackoverflow"><a href="https://stackoverflow.com/questions/9852184/android-textview-hyperlink?rq=1">google stack overflow</a></string>
+    <string name="helpParagraph"> Your goal in this game is to find all the zombies buried under the gravestones.\n
+                Also you want to reach your goal with the least number of scans possible\n
+                You click on a gravestone with a zombie that you have already discovered or a\n
+                gravestone that you clicked but turns out to not have a zombie to commence a scan of the\n
+                row and column of that particular gravestone to tell you how many zombies there are.\n
+                Good Luck!\n
+                <a href="https://giphy.com/gifs/halloween-classic-cartoon-10efL7C86gKyzK">Welcome Screen Animation</a>\n
+                <a href="https://www.cs.sfu.ca/CourseCentral/276/bfraser/index.html">CMPT 276 Home Page</a>\n
+                <a href="https://pngtree.com/freepng/gravediggers_2799181.html">Welcome Screen Image</a>\n
+                <a href="https://www.shutterstock.com/video/clip-1263220-stock-footage-a-creepy-graveyard-halloween-background-scene-with-graves-evil-pumpkins-and-spooky-moonlit-sky.html">Background Image</a></string>
 </resources>

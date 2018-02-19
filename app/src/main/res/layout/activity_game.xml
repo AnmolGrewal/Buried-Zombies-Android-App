@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:screenOrientation="landscape"
     tools:context="as3.cmpt276.findtheburiedzombies.Game">
 
 </android.support.constraint.ConstraintLayout>
