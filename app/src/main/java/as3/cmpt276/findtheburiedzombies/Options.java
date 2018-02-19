@@ -13,8 +13,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import as3.cmpt276.findtheburiedzombies.model.GameState;
+
 public class Options extends AppCompatActivity {
 
+    private GameState game;
     private static final String PREF_NAME = "AppPrefs";
     private static final String NUM_MINES = "Number Mines";
     private static final String NUM_ROWS = "Number Row";
@@ -36,6 +39,13 @@ public class Options extends AppCompatActivity {
 
             }
         });
+
+        int boardRow = Options.getBoardSizeRow(this);
+        int numberMines = Options.getNumberMines(this);
+        int boardCol = Options.getBoardSizeCol(this);
+
+        game = GameState.getInstance();
+        game.setGameBoard(boardCol,boardRow,numberMines);
     }
 
     private void createBoardRadioButtons() {
@@ -54,17 +64,13 @@ public class Options extends AppCompatActivity {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(Options.this, "You Clicked " , Toast.LENGTH_SHORT)
+                    Toast.makeText(Options.this, "You Clicked " + numberRow + " rows by " + numberCol + " columns", Toast.LENGTH_SHORT)
                             .show();
 
                     saveBoardSize(numberRow, numberCol);
                 }
             });
             group.addView(button);
-
-            int savedMines = getNumberMines(this);
-            Toast.makeText(Options.this, "You Clicked " + savedMines, Toast.LENGTH_SHORT)
-                    .show();
 
 
             //Default
@@ -88,7 +94,7 @@ public class Options extends AppCompatActivity {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(Options.this, "You Clicked " + numberMine, Toast.LENGTH_SHORT)
+                    Toast.makeText(Options.this, "You Clicked " + numberMine + " mines", Toast.LENGTH_SHORT)
                             .show();
 
                     saveNumberMines(numberMine);
