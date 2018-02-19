@@ -101,7 +101,7 @@ public class Options extends AppCompatActivity {
             }
         }
     }
-    
+
     private void savetimesPlayed(int timesPlayed) {
         SharedPreferences prefs = this.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();

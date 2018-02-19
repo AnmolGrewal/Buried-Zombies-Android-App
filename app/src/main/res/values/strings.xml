@@ -14,13 +14,13 @@
     <string name="scansUsed"># Scans Used: %1$d</string>
     <string name="timesPlayed">Times Played: %1$d</string>
     <string name="boardOption">%1$d rows by %2$d columns</string>
-    <string name="eraseTimes">Erase Times Played And All High Scores</string>
+    <string name="eraseTimes">Erase Times Played</string>
     <string name="numMinesToast">You Selected %1$d mines</string>
     <string name="totalMinesRowCol">%1$d</string>
     <string name="currentHighScore">Least Scans HighScore : %1$d</string>
     <string name="congratulations">Congratulations! You Won!</string>
     <string name="gameBoardToast">You Selected %1$d rows by %2$d columns</string>
-    <string name="helpParagraph"> Your goal in this game is to find all the zombies buried under the gravestones.\n
+    <string name="helpParagraph">  Your goal in this game is to find all the zombies buried under the gravestones.\n
                 Also you want to reach your goal with the least number of scans possible\n
                 You click on a gravestone with a zombie that you have already discovered or a\n
                 gravestone that you clicked but turns out to not have a zombie to commence a scan of the\n
@@ -29,7 +29,8 @@
                 <a href="https://giphy.com/gifs/halloween-classic-cartoon-10efL7C86gKyzK">Welcome Screen Animation</a>\n
                 <a href="https://www.cs.sfu.ca/CourseCentral/276/bfraser/index.html">CMPT 276 Home Page</a>\n
                 <a href="https://pngtree.com/freepng/gravediggers_2799181.html">Welcome Screen Image</a>\n
-                <a href="https://www.shutterstock.com/video/clip-1263220-stock-footage-a-creepy-graveyard-halloween-background-scene-with-graves-evil-pumpkins-and-spooky-moonlit-sky.html">Background Image</a></string>
+                <a href="https://www.shutterstock.com/video/clip-1263220-stock-footage-a-creepy-graveyard-halloween-background-scene-with-graves-evil-pumpkins-and-spooky-moonlit-sky.html">Background Image</a>\n
+                <a href="http://moziru.com/explore/Graves%20clipart%20cartoon/#go_post_7487_gravestone-clipart-11.png">Zombie Mine</a></string>
     <string name="reset">Reset Completed</string>
     <string name="background_image">background Image</string>
 </resources>

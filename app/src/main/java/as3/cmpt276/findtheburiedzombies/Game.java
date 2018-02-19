@@ -20,7 +20,6 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 //http://moziru.com/explore/Graves%20clipart%20cartoon/#go_post_7487_gravestone-clipart-11.png
-//http://pngimg.com/download/35807
 //https://stackoverflow.com/questions/36371879/how-to-create-a-random-boolean-2d-array-with-a-specific-number-of-true
 
 import java.util.Random;
