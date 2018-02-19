@@ -31,6 +31,35 @@ public class GameState {
         numMines = mines;
         numRows = rows;
         numColumns = columns;
+        numScans = 0;
+        numRevealedMines = 0;
     }
 
+    public int getNumColumns() {
+        return numColumns;
+    }
+
+    public int getNumRows() {
+        return numRows;
+    }
+
+    public int getNumRevealedMines() {
+        return numRevealedMines;
+    }
+
+    public int getNumScans() {
+        return numScans;
+    }
+
+    public int getNumMines() {
+        return numMines;
+    }
+
+    public void setNumRevealedMines() {
+        numRevealedMines++;
+    }
+
+    public void setNumScans() {
+        numScans++;
+    }
 }

@@ -1,10 +1,8 @@
 package as3.cmpt276.findtheburiedzombies;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,8 +15,8 @@ import as3.cmpt276.findtheburiedzombies.model.GameState;
 
 public class Options extends AppCompatActivity {
 
-    private GameState game;
     private static final String PREF_NAME = "AppPrefs";
+    private static final String TIMES_PLAYED = "Times Played";
     private static final String NUM_MINES = "Number Mines";
     private static final String NUM_ROWS = "Number Row";
     private static final String NUM_COLS = "Number Col";
@@ -36,16 +34,11 @@ public class Options extends AppCompatActivity {
         eraseTimes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                savetimesPlayed(0);
+                Toast.makeText(Options.this, R.string.reset, Toast.LENGTH_SHORT)
+                        .show();
             }
         });
-
-        int boardRow = Options.getBoardSizeRow(this);
-        int numberMines = Options.getNumberMines(this);
-        int boardCol = Options.getBoardSizeCol(this);
-
-        game = GameState.getInstance();
-        game.setGameBoard(boardCol,boardRow,numberMines);
     }
 
     private void createBoardRadioButtons() {
@@ -64,7 +57,7 @@ public class Options extends AppCompatActivity {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(Options.this, "You Clicked " + numberRow + " rows by " + numberCol + " columns", Toast.LENGTH_SHORT)
+                    Toast.makeText(Options.this, getString(R.string.gameBoardToast,numberRow,numberCol), Toast.LENGTH_SHORT)
                             .show();
 
                     saveBoardSize(numberRow, numberCol);
@@ -94,7 +87,7 @@ public class Options extends AppCompatActivity {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(Options.this, "You Clicked " + numberMine + " mines", Toast.LENGTH_SHORT)
+                    Toast.makeText(Options.this, getString(R.string.numMinesToast,numberMine), Toast.LENGTH_SHORT)
                             .show();
 
                     saveNumberMines(numberMine);
@@ -108,8 +101,13 @@ public class Options extends AppCompatActivity {
             }
         }
     }
-
-
+    
+    private void savetimesPlayed(int timesPlayed) {
+        SharedPreferences prefs = this.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(TIMES_PLAYED, timesPlayed);
+        editor.apply();
+    }
 
     private void saveNumberMines(int numberMine) {
         SharedPreferences prefs = this.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
